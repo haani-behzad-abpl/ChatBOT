@@ -5,7 +5,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('run.html')
+
+@app.route('/guide')
+def guide():
+    return render_template('guidePage.html')
 
 @app.route('/ask', methods=['POST'])
 def ask():
